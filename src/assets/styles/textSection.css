@@ -1,0 +1,17 @@
+.textSectionWrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #0096c7;
+    color: white;
+    font-family: AGENCY-FB;
+    align-items: flex-end;
+    padding: 20px 0;
+    width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+    .textSectionWrapper {
+        flex: 1;
+        min-height: 200px;
+    }
+}

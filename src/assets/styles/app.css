@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'AGENCY-FB';
+    src: url('../fonts/agency-fb_0b9596562659a0772f5e24c22cae921b.woff') format('woff'),
+        url('../fonts/agency-fb_0b9596562659a0772f5e24c22cae921b.ttf') format('ttf');
+    font-weight: bold;
+}

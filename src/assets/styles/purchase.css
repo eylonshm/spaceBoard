@@ -1,0 +1,12 @@
+.line {
+    width: 300px;
+    height: 3px;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 700px) {
+    .line {
+        width: 600px;
+    }
+}

@@ -1,0 +1,14 @@
+.imageSliderWrapper {
+    display: flex;
+    overflow: hidden;
+    max-height: 700px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 700px) {
+    .imageSliderWrapper {
+        margin: 0;
+        width: 100%;
+    }
+}
