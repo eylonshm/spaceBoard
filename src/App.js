@@ -1,15 +1,14 @@
-import logo from './logo.svg'
-import './assets/fonts/fonts.css'
+import './fonts/fonts.css'
 import Header from './components/header'
 import PhoneBanner from './components/phoneBanner'
 import TextSection from './components/textSection'
 import ImageSlider from './components/imageSlider'
 import { useMediaQuery } from 'react-responsive'
-import sectionsData from './assets/data/textSections'
+import sectionsData from './data/textSections'
 import Purchase from './components/purchase'
 import ContactUs from './components/contactUs'
 import Footer from './components/footer'
-import './assets/styles/app.css'
+import './styles/app.css'
 
 import { BrowserRouter as Router, Switch, Route, Link, useHistory } from 'react-router-dom'
 
