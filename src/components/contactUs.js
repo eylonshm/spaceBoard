@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import emailjs from 'emailjs-com'
+import ReactLoading from 'react-loading'
 
 // Dialog
 import { withStyles } from '@material-ui/core/styles'
@@ -59,6 +60,7 @@ const ContactUs = () => {
   const [phoneNubmer, setPhoneNubmer] = useState('')
   const [message, setMessage] = useState('')
   const [open, setOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   const history = useHistory()
 
@@ -68,7 +70,8 @@ const ContactUs = () => {
   }, history)
 
   const sendData = () => {
-    if (fullName.length > 0 && phoneNubmer.length > 0) {
+    if (fullName.length > 0 && phoneNubmer.length > 0 && !isLoading) {
+      setIsLoading(true)
       emailjs.init('user_j84kyQl49mofRE66TC4Gk')
       emailjs
         .send('service_5lh8oun', 'template_kdhnrn5', { fullName: fullName, phoneNubmer: phoneNubmer })
@@ -77,11 +80,11 @@ const ContactUs = () => {
           setPhoneNubmer('')
           setMessage('!קיבלנו את הפרטים שלך ונחזור אליך בהקדם, תודה')
           setOpen(true)
-          console.log(res)
+          setIsLoading(false)
         })
         .catch((err) => {
           setMessage('052-4315060 לא הצלחנו לקבל את הפרטים שלך, אבל תמיד תוכל ליצור איתנו קשר בטלפון')
-          console.log(err)
+          setIsLoading(false)
         })
     }
   }
@@ -109,7 +112,7 @@ const ContactUs = () => {
           onChange={(event) => setPhoneNubmer(event.target.value)}
         />
         <div style={styles.button} onClick={() => sendData()}>
-          שלח
+          {isLoading ? <ReactLoading type={'bubbles'} color={'white'} height={25} width={25} /> : 'שלח'}
         </div>
       </div>
       <Dialog onClose={handleClose} aria-labelledby='customized-dialog-title' open={open}>
@@ -152,10 +155,13 @@ const styles = {
     border: '2px solid black',
     outline: 'none',
     borderRadius: '0',
+    appearance: 'none',
   },
   button: {
     display: 'flex',
     width: '100px',
+    height: '25px',
+    maxHeight: '25px',
     backgroundColor: 'black',
     color: 'white',
     justifyContent: 'center',

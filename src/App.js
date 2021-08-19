@@ -56,41 +56,46 @@ function App() {
             <ImageSlider />
             <TextSection sectionColor={'#0096c7'} textColor={sectionsData[2].textColor} title={'מידות ומחירים'} centerItems>
               <div style={{ whiteSpace: 'pre-line', display: 'flex', justifyContent: 'space-around' }}>
+                <p style={{ width: '100px' }}>מחיר</p>
+                <p style={{ marginRight: '-4px' }}>נפח</p>
+                <p style={{ marginRight: '-4px' }}>אורך </p>
+              </div>
+              <div style={{ whiteSpace: 'pre-line', display: 'flex', justifyContent: 'space-around' }}>
                 <p style={{ width: '100px' }}>
                   <span style={styles.lineThrough}>1050</span> 800₪
                 </p>
-                <p>54L</p>
+                <p style={{ width: '30px' }}>54L</p>
                 <p>6'0</p>
               </div>
               <div style={{ whiteSpace: 'pre-line', display: 'flex', justifyContent: 'space-around' }}>
                 <p style={{ width: '100px' }}>
                   <span style={styles.lineThrough}>1150</span> 850₪
                 </p>
-                <p>60L</p>
+                <p style={{ width: '30px' }}>60L</p>
                 <p>6'6</p>
               </div>
               <div style={{ whiteSpace: 'pre-line', display: 'flex', justifyContent: 'space-around' }}>
                 <p style={{ width: '100px' }}>
                   <span style={styles.lineThrough}>1250</span> 850₪
                 </p>
-                <p>65L</p>
+                <p style={{ width: '30px' }}>65L</p>
                 <p>7'0</p>
               </div>
               <div style={{ whiteSpace: 'pre-line', display: 'flex', justifyContent: 'space-around' }}>
                 <p style={{ width: '100px' }}>1300₪</p>
-                <p>72L</p>
+                <p style={{ width: '30px' }}>72L</p>
                 <p>7'6</p>
               </div>
               <div style={{ whiteSpace: 'pre-line', display: 'flex', justifyContent: 'space-around' }}>
                 <p style={{ width: '100px' }}>
                   <span style={styles.lineThrough}>1400</span> 890₪
                 </p>
-                <p>80L</p>
+                <p style={{ width: '30px' }}>80L</p>
                 <p>8'0</p>
               </div>
               <div style={{ whiteSpace: 'pre-line', display: 'flex', justifyContent: 'space-around' }}>
                 <p style={{ width: '100px' }}>1550₪</p>
-                <p>86L</p>
+                <p style={{ width: '30px' }}>86L</p>
                 <p>8'4</p>
               </div>
               <div
@@ -101,7 +106,7 @@ function App() {
                 }}
               >
                 <p style={{ width: '100px' }}>1700₪</p>
-                <p>100L</p>
+                <p style={{ width: '30px' }}>100L</p>
                 <p>9'0</p>
               </div>
 
